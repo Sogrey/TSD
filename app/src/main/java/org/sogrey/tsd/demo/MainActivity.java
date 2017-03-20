@@ -12,9 +12,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         L.init(BuildConfig.DEBUG);
+        L.v("测试日志");
         L.d("测试日志");
-
+        L.i("测试日志");
+        L.w("测试日志");
+        L.e("测试日志");
+        L.wtf("测试日志");
         String json = "{\"token\":\"XXXXXXXXXXXtokanXXXXXXXXX\",\"result\":\"1\",\"msg\":\"nulls\"}";
         L.json(json);
+
+        L.v("My name is %s","Sogrey");
     }
 }
