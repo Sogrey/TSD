@@ -24,11 +24,11 @@ Toast Snackbar Dialog Log
     String json = "{\"token\":\"XXXXXXXXXXXtokanXXXXXXXXX\",\"result\":\"1\",\"msg\":\"nulls\"}";
     L.json(json);
 
-![log](pic/log/log1.png)
+![log](https://github.com/Sogrey/TSD/blob/master/pics/log/log1.png?raw=true)
 
 以上方法中出L.json(String)方法以外，还有两参方法，以`L.v()`为例：
 
     L.v("My name is %s","Sogrey");
 
-![log](pic/log/log2.png)
+![log](https://github.com/Sogrey/TSD/blob/master/pics/log/log2.png?raw=true)
 
