@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import org.sogrey.tsd.log.L;
+import org.sogrey.tsd.toast.StyleableToast;
+import org.sogrey.tsd.toast.T;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,5 +24,8 @@ public class MainActivity extends AppCompatActivity {
         L.json(json);
 
         L.v("My name is %s","Sogrey");
+
+//        StyleableToast.makeText()
+
     }
 }
