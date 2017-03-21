@@ -74,7 +74,7 @@ or
 ### SnackBar管理 - S
 ### Dialog管理 - D
 
-####plan 1 -  MaterialDialog
+#### plan 1 -  MaterialDialog
 
 	MaterialDialog mMaterialDialog = new MaterialDialog(this)
 		.setTitle("MaterialDialog")
