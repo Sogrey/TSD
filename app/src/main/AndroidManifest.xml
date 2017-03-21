@@ -16,9 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LogActivity"></activity>
-        <activity android:name=".ToastActivity"></activity>
-        <activity android:name=".SnackBarActivity"></activity>
+        <activity android:name=".LogActivity" />
+        <activity android:name=".ToastActivity" />
+        <activity android:name=".SnackBarActivity" />
+        <activity android:name=".DialogActivity"></activity>
     </application>
 
 </manifest>
