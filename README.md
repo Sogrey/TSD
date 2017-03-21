@@ -73,6 +73,35 @@ or
 
 ### SnackBar管理 - S
 ### Dialog管理 - D
+
+####plan 1 -  MaterialDialog
+
+	MaterialDialog mMaterialDialog = new MaterialDialog(this)
+		.setTitle("MaterialDialog")
+		.setMessage("Hello world!")
+		.setPositiveButton("OK", new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				mMaterialDialog.dismiss();
+			}
+		})
+		.setNegativeButton("CANCEL", new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				mMaterialDialog.dismiss();
+			}
+		});
+
+        mMaterialDialog.show();
+
+	// You can change the message anytime. before show
+        mMaterialDialog.setTitle("提示");
+        mMaterialDialog.show();
+	// You can change the message anytime. after show
+        mMaterialDialog.setMessage("你好，世界~");
+
+![MaterialDialog](https://github.com/Sogrey/TSD/blob/master/pics/dialog/dialog1.png?raw=true)
+
 ### Log日志管理 - L
 
 #### steps 1. 初始化
