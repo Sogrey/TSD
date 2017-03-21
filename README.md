@@ -72,6 +72,23 @@ or
 
 
 ### SnackBar管理 - S
+
+#### SnackBar
+
+	SnackBar mSnackBar = new SnackBar.Builder(this)
+		.withOnClickListener(this)
+		.withMessage(message) //传参String
+		//.withMessageId(messageRes) // 传参ID
+		.withActionMessage("Action") //传参String 可无
+		//.withActionMessageId(R.string.action) // 传参ID 可无
+		.withStyle(style)
+		.withBackgroundColorId(bgColor)
+		.withDuration(duration)
+		.show();
+
+![MaterialDialog](https://github.com/Sogrey/TSD/blob/master/pics/dialog/snackBar1.png?raw=true)
+
+
 ### Dialog管理 - D
 
 #### plan 1 -  MaterialDialog
