@@ -26,13 +26,51 @@ Or maven:
       <type>pom</type>
     </dependency>
 
-Or download aar [![Download](https://api.bintray.com/packages/sogrey/maven/TSD/images/download.svg) ](https://bintray.com/sogrey/maven/download_file?file_path=org%2Fsogrey%2FTSD%2F0.0.1%2FTSD-0.0.1.aar)
+Or download aar [![Download](https://api.bintray.com/packages/sogrey/maven/TSD/images/download.svg) ](https://bintray.com/sogrey/maven/download_file?file_path=org%2Fsogrey%2FTSD%2F0.0.2%2FTSD-0.0.2.aar)
 
 > 其中：{lastVersion} 用上面 Download 徽章后面的版本号替换。
 
 ## Parts
 
 ### Toast管理 - T
+
+两种创建方式：
+
+#### plan 1 直接new
+
+	Tt  st = new Tt(this, "Updating profile", Toast.LENGTH_LONG);
+		st.setBackgroundColor(Color.parseColor("#ff5a5f"));
+		st.setTextColor(Color.WHITE);
+		st.setIcon(R.drawable.ic_autorenew_black_24dp);
+		st.spinIcon();
+		st.setMaxAlpha();
+		st.show();
+
+#### plan 2 Builder模式
+
+	Tt stBuilder = new Tt.Builder(this, "Turn off fly mode")
+		.withGravity(Gravity.TOP)
+		.withBackgroundColor(Color.parseColor("#865aff"))
+		.withIcon(R.drawable.ic_airplanemode_inactive_black_24dp)
+		.withMaxAlpha()
+		.build();
+	stBuilder.show();
+
+or
+
+	new Tt.Builder(this, "Turn off fly mode")
+		.withGravity(Gravity.TOP)
+		.withBackgroundColor(Color.parseColor("#865aff"))
+		.withIcon(R.drawable.ic_airplanemode_inactive_black_24dp)
+		.withMaxAlpha()
+		.show();
+
+![Toast](https://github.com/Sogrey/TSD/blob/master/pics/toast/toast1.png?raw=true)
+![Toast](https://github.com/Sogrey/TSD/blob/master/pics/toast/toast2.png?raw=true)
+![Toast](https://github.com/Sogrey/TSD/blob/master/pics/toast/toast3.png?raw=true)
+![Toast](https://github.com/Sogrey/TSD/blob/master/pics/toast/toast4.png?raw=true)
+
+
 ### SnackBar管理 - S
 ### Dialog管理 - D
 ### Log日志管理 - L
@@ -56,7 +94,7 @@ Or download aar [![Download](https://api.bintray.com/packages/sogrey/maven/TSD/i
 
 ![log](https://github.com/Sogrey/TSD/blob/master/pics/log/log1.png?raw=true)
 
-以上方法中出L.json(String)方法以外，还有两参方法，以`L.v()`为例：
+以上方法中除L.json(String)方法以外，还有两参方法，以`L.v()`为例：
 
     L.v("My name is %s","Sogrey");
 

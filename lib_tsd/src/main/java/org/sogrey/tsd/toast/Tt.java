@@ -1,7 +1,6 @@
 package org.sogrey.tsd.toast;
 
 
-import android.bluetooth.BluetoothClass;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
@@ -43,14 +42,14 @@ import static org.sogrey.tsd.toast.Utils.getTypedValueInDP;
 
 
 /**
- * StyleableToast is a very easy and quick way to style your toast and gives them an unique style and feeling compared
- * to the default boring grey ones. StyleableToast have 10 styling options.
+ * Tt is a very easy and quick way to style your toast and gives them an unique style and feeling compared
+ * to the default boring grey ones. Tt have 10 styling options.
  * <p>If a particular style option is not set, the option will fall back to the standard Android Toast style</p>
  */
 
-public class StyleableToast implements OnToastFinished {
+public class Tt implements OnToastFinished {
 
-    private static final String TAG = "StyleableToast";
+    private static final String TAG = "Tt";
     private static final String DEFAULT_CONDENSED_FONT = "sans-serif-condensed";
     private static final int DEFAULT_BACKGROUND = Color.parseColor("#555555");
     private static final int DEFAULT_TEXT_COLOR = Color.WHITE;
@@ -72,6 +71,35 @@ public class StyleableToast implements OnToastFinished {
     private int cornerRadius = -1;
     private boolean isBold, isAnimation;
     private String toastMsg;
+
+//    private WindowManager mWdm;
+//    private WindowManager.LayoutParams mParams;
+//    private Timer mTimer;
+//    private boolean mIsShow;//记录当前Toast的内容是否已经在显示
+
+
+//    public void setAnimation(/*int anim*/) {
+//        mIsShow = false;//记录当前Toast的内容是否已经在显示
+//        mWdm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+//        mTimer = new Timer();
+//        //设置布局参数
+//        setParams(R.style.anim_view);
+//    }
+//
+//    private void setParams(int anim) {
+//        mParams = new WindowManager.LayoutParams();
+//        mParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
+//        mParams.width = WindowManager.LayoutParams.WRAP_CONTENT;
+//        mParams.format = PixelFormat.TRANSLUCENT;
+//        mParams.windowAnimations = anim;//设置进入退出动画效果
+//        mParams.type = WindowManager.LayoutParams.TYPE_TOAST;
+//        mParams.flags = WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
+//                | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
+//                | WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE;
+//        mParams.gravity = this.gravity;
+//        mParams.y = 250;
+//    }
+
     /**
      * 默认在底部
      */
@@ -83,7 +111,7 @@ public class StyleableToast implements OnToastFinished {
      *
      * @param context 上下文
      */
-    public StyleableToast(Context context) {
+    public Tt(Context context) {
         this.context = context.getApplicationContext();
     }
 
@@ -94,7 +122,7 @@ public class StyleableToast implements OnToastFinished {
      * @param toastMsg 消息内容
      * @param duration 持续时间
      */
-    public StyleableToast(Context context, String toastMsg, int duration) {
+    public Tt(Context context, String toastMsg, int duration) {
         this.context = context.getApplicationContext();
         this.toastMsg = toastMsg;
         this.duration = duration;
@@ -108,7 +136,7 @@ public class StyleableToast implements OnToastFinished {
      * @param duration 持续时间
      * @param styleId  样式ID
      */
-    public StyleableToast(Context context, String toastMsg, int duration, /*@StyleRes*/ int styleId) {
+    public Tt(Context context, String toastMsg, int duration, /*@StyleRes*/ int styleId) {
         this.context = context.getApplicationContext();
         this.toastMsg = toastMsg;
         this.duration = duration;
@@ -121,10 +149,11 @@ public class StyleableToast implements OnToastFinished {
      *
      * @param builder 创建者对象
      */
-    private StyleableToast(Builder builder) {
+    private Tt(Builder builder) {
         this.context = builder.context;
         this.toastMsg = builder.message;
         this.duration = builder.length;
+        this.gravity = builder.gravity;
         setupFromBuilder(builder);
     }
 
@@ -271,7 +300,7 @@ public class StyleableToast implements OnToastFinished {
      * 使旋转图标的动画绕其周围的中心<br>
      * Enables spinning animation of the passed icon by its around its own center.
      */
-    public StyleableToast spinIcon() {
+    public Tt spinIcon() {
         isAnimation = true;
         return this;
     }
@@ -500,7 +529,6 @@ public class StyleableToast implements OnToastFinished {
             anim.setDuration(1000);
             return anim;
         }
-
         return null;
     }
 
@@ -613,7 +641,8 @@ public class StyleableToast implements OnToastFinished {
         toast = new Toast(context);
         toast.setView(getToastLayout());
         toast.setDuration(duration);
-        toast.setGravity(gravity, 0, 0);
+        toast.setGravity(gravity, 0, 40);
+
         toast.show();
 
         if (isAnimation) {
@@ -649,11 +678,11 @@ public class StyleableToast implements OnToastFinished {
      * @param style    样式
      * @return 返回吐司
      */
-    public static StyleableToast makeText(Context context, CharSequence text, int duration, int style) {
+    public static Tt makeText(Context context, CharSequence text, int duration, int style) {
 
-        StyleableToast styleableToast = new StyleableToast(context, text.toString(), duration, style);
+        Tt tt = new Tt(context, text.toString(), duration, style);
 
-        return styleableToast;
+        return tt;
     }
 
     /**
@@ -664,6 +693,7 @@ public class StyleableToast implements OnToastFinished {
         private final Context context;
         private String message;
         private int length = Toast.LENGTH_LONG;
+        private int gravity = Gravity.BOTTOM;
 
         /* @ColorInt*/
         private int bgColor = -1;
@@ -733,6 +763,22 @@ public class StyleableToast implements OnToastFinished {
             if (duration == Toast.LENGTH_LONG || duration == Toast.LENGTH_SHORT) {
                 this.length = duration;
             }
+            return this;
+        }
+
+        /**
+         * 设置对齐方式
+         *
+         * @param gravity 可选值有：{@link Gravity#CENTER},
+         *                {@link Gravity#CENTER_HORIZONTAL},
+         *                {@link Gravity#CENTER_VERTICAL},
+         *                {@link Gravity#TOP},
+         *                {@link Gravity#BOTTOM},
+         *                {@link Gravity#LEFT},
+         *                {@link Gravity#RIGHT}等..
+         */
+        public Builder withGravity(int gravity) {
+            this.gravity = gravity;
             return this;
         }
 
@@ -840,18 +886,18 @@ public class StyleableToast implements OnToastFinished {
          * 构建者模式的build方法
          * Build and returns the configured instance
          *
-         * @return The configured {@link StyleableToast} instance.
+         * @return The configured {@link Tt} instance.
          */
-        public StyleableToast build() {
-            return new StyleableToast(this);
+        public Tt build() {
+            return new Tt(this);
         }
 
         /**
          * 显示
-         * Build and displays the configured {@link StyleableToast} instance
+         * Build and displays the configured {@link Tt} instance
          */
         public void show() {
-            new StyleableToast(this).show();
+            new Tt(this).show();
         }
 
     }
