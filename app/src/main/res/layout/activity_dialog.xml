@@ -6,9 +6,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="org.sogrey.tsd.demo.DialogActivity">
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="MaterialDialog"
-    android:onClick="MaterialDialog"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="MaterialDialog"
+        android:text="MaterialDialog" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="LoadingDialog"
+        android:text="LoadingDialog" />
 </LinearLayout>

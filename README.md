@@ -102,6 +102,27 @@ or
 
 ![MaterialDialog](https://github.com/Sogrey/TSD/blob/master/pics/dialog/dialog1.png?raw=true)
 
+#### plan 1 -  LoadingDialog
+
+        loadingDialog = new LoadingDialog();
+        loadingDialog.handlerStart(this, "", "正在加载数据...");
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                loadingDialog.handlerUpdate("", "正在加载模型结构文件...");
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        loadingDialog.handlerStop("");
+                    }
+                }, 2000);
+            }
+        }, 2000);
+
+
+![MaterialDialog](https://github.com/Sogrey/TSD/blob/master/pics/dialog/LoadingDialog.gif?raw=true)
+
+
 ### Log日志管理 - L
 
 #### steps 1. 初始化
