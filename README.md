@@ -65,10 +65,10 @@ or
 		.withMaxAlpha()
 		.show();
 
-![Toast](https://github.com/Sogrey/TSD/blob/master/pics/toast/toast1.png?raw=true)
-![Toast](https://github.com/Sogrey/TSD/blob/master/pics/toast/toast2.png?raw=true)
-![Toast](https://github.com/Sogrey/TSD/blob/master/pics/toast/toast3.png?raw=true)
-![Toast](https://github.com/Sogrey/TSD/blob/master/pics/toast/toast4.png?raw=true)
+![Toast1](https://github.com/Sogrey/TSD/blob/master/pics/toast/toast1.png?raw=true)
+![Toast2](https://github.com/Sogrey/TSD/blob/master/pics/toast/toast2.png?raw=true)
+![Toast3](https://github.com/Sogrey/TSD/blob/master/pics/toast/toast3.png?raw=true)
+![Toast4](https://github.com/Sogrey/TSD/blob/master/pics/toast/toast4.png?raw=true)
 
 
 ### SnackBar管理 - S
@@ -86,7 +86,7 @@ or
 		.withDuration(duration)
 		.show();
 
-![MaterialDialog](https://github.com/Sogrey/TSD/blob/master/pics/dialog/snackBar1.png?raw=true)
+![snackBar1.png](https://github.com/Sogrey/TSD/blob/master/pics/snackbar/snackBar1.png?raw=true)
 
 
 ### Dialog管理 - D
@@ -117,7 +117,7 @@ or
 	// You can change the message anytime. after show
         mMaterialDialog.setMessage("你好，世界~");
 
-![MaterialDialog](https://github.com/Sogrey/TSD/blob/master/pics/dialog/dialog1.png?raw=true)
+![dialog1.png](https://github.com/Sogrey/TSD/blob/master/pics/dialog/dialog1.png?raw=true)
 
 #### plan 1 -  LoadingDialog
 
@@ -137,7 +137,7 @@ or
         }, 2000);
 
 
-![MaterialDialog](https://github.com/Sogrey/TSD/blob/master/pics/dialog/LoadingDialog.gif?raw=true)
+![LoadingDialog.gif](https://github.com/Sogrey/TSD/blob/master/pics/dialog/LoadingDialog.gif?raw=true)
 
 
 ### Log日志管理 - L
@@ -159,13 +159,13 @@ or
     String json = "{\"token\":\"XXXXXXXXXXXtokanXXXXXXXXX\",\"result\":\"1\",\"msg\":\"nulls\"}";
     L.json(json);
 
-![log](https://github.com/Sogrey/TSD/blob/master/pics/log/log1.png?raw=true)
+![log1](https://github.com/Sogrey/TSD/blob/master/pics/log/log1.png?raw=true)
 
 以上方法中除L.json(String)方法以外，还有两参方法，以`L.v()`为例：
 
     L.v("My name is %s","Sogrey");
 
-![log](https://github.com/Sogrey/TSD/blob/master/pics/log/log2.png?raw=true)
+![log2](https://github.com/Sogrey/TSD/blob/master/pics/log/log2.png?raw=true)
 
 
 
