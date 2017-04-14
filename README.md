@@ -26,7 +26,7 @@ Or maven:
       <type>pom</type>
     </dependency>
 
-Or download aar [![Download](https://api.bintray.com/packages/sogrey/maven/TSD/images/download.svg) ](https://bintray.com/sogrey/maven/download_file?file_path=org%2Fsogrey%2FTSD%2F0.0.3%2FTSD-0.0.3.aar)
+Or download aar [![Download](https://api.bintray.com/packages/sogrey/maven/TSD/images/download.svg) ](https://bintray.com/sogrey/maven/download_file?file_path=org%2Fsogrey%2FTSD%2F0.0.4%2FTSD-0.0.4.aar)
 
 > 其中：{lastVersion} 用上面 Download 徽章后面的版本号替换。
 

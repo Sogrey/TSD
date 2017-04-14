@@ -30,6 +30,11 @@
         android:text="Dialog"
         android:onClick="toDialogActivity"
         android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="match_parent"
+        android:text="Pop"
+        android:onClick="toPopActivity"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
 

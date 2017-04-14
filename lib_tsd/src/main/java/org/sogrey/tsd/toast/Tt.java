@@ -792,14 +792,16 @@ public class Tt implements OnToastFinished {
         }
 
         /**
-         * 设置图标及图标动画
+         * 设置图标及图标动画,-1默认无图标
          *
          * @param iconRes  The icon's resource which should be used within the toast
          * @param spinIcon Enables spinning animation of the passed icon by its around its own center.
          */
         public Builder withIcon(/*@DrawableRes*/ int iconRes, boolean spinIcon) {
-            this.icon = iconRes;
-            this.iconAnimation = spinIcon;
+            if(iconRes!=-1){
+                this.icon = iconRes;
+                this.iconAnimation = spinIcon;
+            }
             return this;
         }
 

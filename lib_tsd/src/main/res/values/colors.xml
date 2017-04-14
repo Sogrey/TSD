@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorAccent">#FF4081</color>
+
     <color name="sb__snack_bkgnd">#323232</color>
     <color name="sb__snack_alert_bkgnd">#ffff4444</color>
     <color name="sb__transparent">#00000000</color>
@@ -12,4 +14,9 @@
     <color name="lite_blue">#ff359ff2</color>
     <color name="window_background">#00000000</color>
     <color name="black_de">#DE000000</color>
+
+
+    <color name="warning_color">#f4511e</color>
+    <color name="hint_color">#42000000</color>
+    <color name="success_color">#009688</color>
 </resources>

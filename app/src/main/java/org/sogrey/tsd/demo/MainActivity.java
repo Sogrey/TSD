@@ -25,4 +25,7 @@ public class MainActivity extends AppCompatActivity {
     public void toDialogActivity(View v){
         startActivity(new Intent(this,DialogActivity.class));
     }
+    public void toPopActivity(View v){
+        startActivity(new Intent(this,PopActivity.class));
+    }
 }

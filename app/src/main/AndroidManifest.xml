@@ -19,7 +19,9 @@
         <activity android:name=".LogActivity" />
         <activity android:name=".ToastActivity" />
         <activity android:name=".SnackBarActivity" />
-        <activity android:name=".DialogActivity"></activity>
+        <activity android:name=".DialogActivity" />
+        <activity android:name=".PopActivity" />
+        <activity android:name=".AdActivity"></activity>
     </application>
 
 </manifest>
