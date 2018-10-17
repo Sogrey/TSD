@@ -6,6 +6,7 @@ Toast Snackbar Dialog Log
 [![Platform](https://img.shields.io/badge/platform-Android-green.svg?style=flat)](https://www.android.com)
 [![API](https://img.shields.io/badge/API-9%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=9)
 [![Download](https://api.bintray.com/packages/sogrey/maven/TSD/images/download.svg)](https://bintray.com/sogrey/maven/TSD/_latestVersion)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b75d88eba4f341d29d4c800feee9a873)](https://www.codacy.com/app/Sogrey/TSD?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Sogrey/TSD&amp;utm_campaign=Badge_Grade)
 
 ## JavaDoc
 
